@@ -42,4 +42,5 @@ sudo docker-compose up
 sudo docker-compose up
 
 #
+sudo docker compose exec netbox /opt/netbox/netbox/manage.py createsuperuser
 
