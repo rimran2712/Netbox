@@ -6,3 +6,5 @@ sudo apt upgrade
 # Make sure Git install if not than you can install to download repo from GitHub, if not installed than you can install  with below command
 sudo apt install git
 
+#Clone Netbox repo Github with belwo command
+
