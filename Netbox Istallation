@@ -41,6 +41,8 @@ sudo docker-compose up
 # turnup Netbox docker again after two minutes, wait for some times to load it up, wait until hundrards of logs messages finish
 sudo docker-compose up
 
-#
-sudo docker compose exec netbox /opt/netbox/netbox/manage.py createsuperuser
+# We will create Username, password for Netbox, please provide username, password and email address
+sudo docker-compose exec netbox /opt/netbox/netbox/manage.py createsuperuser
 
+# we can access Netbox through web browser using below link, 
+http://localhost:8000/
