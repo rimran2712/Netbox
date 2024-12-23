@@ -7,4 +7,4 @@ sudo apt upgrade
 sudo apt install git
 
 #Clone Netbox repo Github with belwo command
-
+sudo git clone -b release https://github.com/netbox-community/netbox-docker.git
