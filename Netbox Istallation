@@ -8,3 +8,38 @@ sudo apt install git
 
 #Clone Netbox repo Github with belwo command
 sudo git clone -b release https://github.com/netbox-community/netbox-docker.git
+
+# make sure you change folder to execute further commands
+cd netbox-docker/
+
+# Create file in this directory
+sudo touch docker-compose.override.yml
+
+# EDIT file and add below configuration, save file
+sudo vim docker-compose.override.yml
+
+---
+
+services:
+    netbox:
+        ports:
+          - "8000:8080"
+
+# install docker support in Ubuntu
+sudo apt install docker.io
+
+# We also need to install Docker compose
+sudo apt-get install docker-compose
+
+# execute below command to pull all files from repository, make sure you are inside folder netbox-docker
+sudo docker-compose pull
+
+# Now lets turnup Netbox docker, make sure you wait enough because things spinning up in baground, 
+sudo docker-compose up
+
+# Note: we might see "ERROR: for netbox-housekeeping  Container "c64cfa0ec78f" is unhealthy." but still you have to wait at least 2 to 3 minutes because still spinning up things at baground. 
+# turnup Netbox docker again after two minutes, wait for some times to load it up, wait until hundrards of logs messages finish
+sudo docker-compose up
+
+#
+
